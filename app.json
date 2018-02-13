@@ -1,0 +1,18 @@
+{
+  "pages": [
+    
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/exch-record/index",
+    "pages/inte-mall/index",
+    "pages/goods-detail/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "积分商城",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  }
+}

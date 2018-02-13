@@ -1,0 +1,73 @@
+/* pages/exch-record/index.wxss */
+page {
+  font-size: 28rpx;
+}
+.txt-large {
+  font-size: 36rpx;
+}
+.txt-big {
+  font-size: 30rpx;
+}
+.container {
+  background-color: #fff;
+  min-height: 100%;
+  padding:0;
+  padding-top:24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.exch-box {
+  width:620rpx;
+   /* background: #fce6e8;  */
+   background: #ff9701;  
+  height: 200rpx;
+  padding:0 40rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 24rpx;
+  color: #fff;
+}
+.left-circle {
+  width: 50rpx;
+  height: 50rpx;
+  background: #fff;
+  border-radius: 50rpx;
+  position: absolute;
+  left: -25rpx;
+  top: 75rpx;
+}
+.right-circle {
+  width: 50rpx;
+  height: 50rpx;
+  background: #fff;
+  border-radius: 50rpx;
+  position: absolute;
+  right: -25rpx;
+  top: 75rpx;
+}
+.exch-title {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+.exch-des {
+  height: 120rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+}
+
+/* 加载  */
+.loading {
+  height: 46rpx;
+  padding-bottom: 24rpx;
+  display: flex;
+  align-items: center;
+}
+.loading image {
+  width: 44rpx;
+  height: 46rpx;
+  margin-right: 4rpx;
+}

@@ -1,0 +1,18 @@
+<view class='container'>
+  <view class='loading' hidden="{{loadingRefreshHidden ? true : false}}">
+    <image src='https://www.lamic.cn/tmpaystatic/admin/images/009.gif'></image><text>数据加载中...</text>
+  </view>
+  <view wx:for="{{cards}}" wx:key="id" class='exch-box'>
+    <view class='left-circle'></view><view class='right-circle'></view>
+    <view class='exch-title'>
+      <text class='txt-large'>{{item.product.name}}</text>
+    </view>
+    <view class='exch-des'>
+      <text>{{item.product.description}}</text>
+    </view>
+  </view>
+  <view class='loading' hidden="{{loadingMoreHidden ? true : false}}">
+    <image src='https://www.lamic.cn/tmpaystatic/admin/images/009.gif'></image><text>数据加载中...</text>
+  </view>
+  <view class='loading' hidden="{{hasMore ? true : false}}"><text>没有更多啦</text></view>
+</view>

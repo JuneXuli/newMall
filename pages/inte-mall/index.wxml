@@ -1,0 +1,30 @@
+<!--pages/inte-mall/index.wxml-->
+<view class='container'>
+  <view class='type-container' wx:if="{{categories.length > 0}}">
+    <scroll-view class='type-navbar' scroll-x='true'>
+      <view class='type-box' wx:for-items='{{categories}}' wx:key='id'>
+        <view id="{{item.id}}" class='type-navbar-item {{selectCateId === item.id?"type-item-on":""}}' bindtap="tapCate">{{item.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view wx:if="{{categories.length > 0}}" style="height:88rpx;"></view>
+  <view wx:if='{{goods.length>0}}' class='goods-container'>
+    <view wx:for='{{goods}}' wx:key='id' class='goods-box' data-index='{{index}}' bindtap='tabGoods' hover-class='goods-box-hover'>
+      <view class='img-box'>
+        <image src="{{item.pic}}" class="slide-image" mode ='aspectFill'></image>
+      </view>
+      <view class='goods-des'>
+        <view>【{{item.name}}】</view>
+        <view>所需积分：<text class='txt-orange'>{{item.price}}</text></view>
+        <view>库存：{{item.stock}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class='goods-no'> 暂无商品 </view>
+  <view class='loading' hidden="{{loadingMoreHidden ? true : false}}">
+    <image src='https://www.lamic.cn/tmpaystatic/admin/images/009.gif'></image><text>数据加载中...</text>
+  </view>
+  <view class='goods-no' wx:if='{{!hasMore}}' >
+    <text>没有更多了</text>
+  </view>
+</view>
